@@ -1,0 +1,410 @@
+body{
+    /*background: #E4E4E4;*/
+    background: var(--pic, #FFF);
+    margin: 0;
+    padding: 0;
+}
+.blanc{
+    color: #FFF;
+}
+.fondBlanc{
+    background-color: #F5F5F5;
+}
+.noir{
+    color: #343E46;
+}
+.fondNoir{
+    background-color: #343E46;
+}
+.roboto{
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+}
+.bd22{
+    border-radius: 22px;
+}
+.mB90{
+    margin-bottom: 90px;
+}
+.centerText{
+    text-align: center;
+}
+h1{
+    font-family: "Inter";
+    font-size: 96px;
+}
+.formH1{
+    font-size: 64px;
+}
+h2{
+    font-family: "Inter";
+    font-size: 50.51px;
+    margin: 0;
+}
+h3{
+    font-family: "Inter";
+    font-size: 37.89px;
+    font-weight: 600;
+    padding: 0%;
+}
+h4{
+    font-size: 22px;
+    line-height: 28px;
+    margin: 0;
+}
+p{
+    font-family: Inter;
+    font-size: 16px;
+}
+.date{
+    color: var(--M3-sys-light-on-surface-variant, #49454F);
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+}
+.commentDate{
+    color: #49454F;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+*{
+    border-style: none;
+}
+.border{
+    border: 1px solid var(--M3-sys-light-outline-variant, #CAC4D0);
+}
+.spacedP{
+    line-height: 261%;
+}
+.vhFull{
+    height: 100vh;
+}
+.columnDirection{
+    flex-direction: column;
+}
+/* Boutons */
+.navButton{
+    /*padding: 10px 25px 10px 25px;*/
+    width: 160px;
+    height: 38px;
+}
+.darkButton{
+    background: #383838;
+    width: 160px;
+    height: 38px;
+}
+.espacePersoButton{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px 4px 12px;
+    border: 1px solid #FFFF;
+    border-radius: 30px;
+    text-align: center;
+}
+.articleCardPicButton{
+    display: flex;
+    padding: 10px 24px;
+    justify-content: center;
+    border-radius: 22px;
+}
+.classButton{
+    width:18%;
+}
+.articleCardDescButton{
+    width: 100%;
+}
+
+/* Sections */
+.sectionOneHome{
+    height: 100vh;
+    background: url("homeHeader.jpg") lightgray 50% / cover no-repeat;
+}
+.sectionTwoHome{
+    display: flex;
+    padding: 90px;
+    gap: 90px;
+}
+.homeCardsContainer{
+    display: flex;
+    gap: 108px;
+    justify-content: center;
+}
+.sectionTroisHome{
+    display: flex;
+    gap: 90px;
+}
+.sectionCinq{
+    display: flex;
+    justify-content: center;
+    padding: 90px;
+}
+
+/* blog */
+.sectionOneBlog{
+    height: 361px;
+    background: url("ble.jpg") lightgray 50% / cover no-repeat;
+}
+.sectionTwoBlog{
+    gap: 92px 82px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+.filtresBlog{
+    width: 100vw;
+    padding: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+/* A propos */
+.aproposContent{
+    display: flex;
+    /*gap: 140px;*/
+    justify-content: center;
+}
+.aproposPic{
+    width: 474px;
+    height: 567px;
+    min-width: 275px;
+    margin: 70px;
+}
+.aproposTexte{
+    display: flex;
+    gap: 40px;
+    min-width: 175px;
+    max-width: 440px;
+    margin: 70px;
+}
+/* Connexion */
+.connexionBody{
+    display: flex;
+    justify-content: space-between;
+}
+/* espace perso*/
+.espacePerso{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.espacePDroite{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    width: 100%;
+    height: 85%;
+
+}
+.espacePGauche{
+    width: 50%;
+    height: 85%;
+    margin: 50px;
+}
+.espacePPic{
+    width: 300px;
+    height: 300px;
+}
+.comment{
+    width: 65%;
+}
+/* Background images */
+.seville{
+    background: url("Séville.jpg") lightgray 50% / cover no-repeat;
+}
+.algarve{
+    background: url("Algarve.jpg") lightgray 50% / cover no-repeat;
+}
+.lisbonne{
+    background: url("lisbonne.jpg") lightgray 50% / cover no-repeat;
+}
+.map{
+    background: url("map.jpg") lightgray 50% / cover no-repeat;
+}
+.chateau{
+    background: url("chateau.jpg") lightgray 50% / cover no-repeat;
+}
+.piscine{
+    background: url("piscine.jpg") lightgray 50% / cover no-repeat;
+}
+.paella{
+    background: url("paella.jpg") lightgray 50% / cover no-repeat;
+}
+.about{
+    background: url("about.jpg") lightgray 50% / cover no-repeat;
+}
+.apropos{
+    background: url("APropos.jpg") lightgray -618.844px -978.831px / 146.125% 587.765% no-repeat;
+}
+.ecris{
+    background: url("ecris.jpg") lightgray 50% / cover no-repeat;
+}
+.profil{
+    background: url("profilePic.jpg") lightgray 50% / cover no-repeat;
+}
+
+/* nav */
+nav{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 26px 10px 26px;
+    box-sizing: border-box;
+}
+nav div{
+    display: flex;
+    gap: 30px;
+}
+
+/* form */
+.formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 620px;
+}
+label{
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 25px;
+    margin-bottom: 6px;
+}
+input{
+    height: 48px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    background-color: #F5F5F5;
+    margin-bottom: 38px;
+}
+.submit{
+    width: 240px;
+    align-self: center;
+    margin-bottom: 60px;
+    margin-top: 22px;
+}
+
+/* article card pic */
+.articleCardPic{
+    /*background-color: aquamarine;*/
+    max-width: 320px;
+    height: 450px;
+    border-radius: 11px;
+    display: flex;
+    justify-content: flex-end;
+}
+.articleCardPicText{
+    width: 288px;
+    height: 148px;
+    padding: 16px;
+    border-radius: 11px;
+    display: flex;
+    justify-content: center;
+    /*align-items: flex-start;
+    gap: 32px;*/
+    background: linear-gradient(#F5F5F500, #B2B5B82C, #787E8352, #343E46A1 );
+}
+.articleCardPicDate{
+    font-size: 14px;
+    margin: 0;
+    align-self:baseline;
+    padding-left: 18px;
+}
+.articleCardPicTitle{
+    font-size: 22px;
+}
+/* article card desc */
+.articleCardDesc{
+    height: 683px;
+    width: 360px;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+.articleCardDescPic{
+    width: 360px;
+    height: 341.5px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.articleCardDescText{
+    display: flex;
+    box-sizing: border-box;
+    width: 360px;
+    padding: 16px;
+    align-items: flex-start;
+    gap: 32px;
+    flex: 1 0 0;
+}
+.articleCardDescription{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+/* Destinations */
+.destination{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: fit-content;
+
+}
+.destinationPic{
+    width: 772px;
+    height: 453px;
+}
+.destinationText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 67px;
+    gap: 41px;
+    max-width: 821px;
+}
+.destinationP{
+    width: 472px;
+}
+div .destinationPortugal{
+    flex-direction: row-reverse;
+}
+
+/* Recettes */
+.sectionQuatreHome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.recetteText{
+    background-color: #F5F5F5;
+    padding: 27px;
+    width: 60vw;
+    min-height: 300px;
+    gap: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sectionQuatreHome h2{
+    background-color: #383838;
+    width: fit-content;
+    order: 0;
+}
+.recetteButton{
+    justify-content: flex-end;
+}
