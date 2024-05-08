@@ -21,22 +21,22 @@
             <div class="articleCardPic columnDirection seville">
                 <div class="articleCardPicText columnDirection">
                     <p class="roboto articleCardPicDate blanc centerText" >11/04/24</p>
-                    <p class=" roboto articleCardPicTitle blanc centerText">Séville : un voyage dans...</p>
-                    <button class="roboto articleCardPicButton noir">Lire plus</button>
+                    <p class="roboto articleCardPicTitle blanc centerText">Séville : un voyage dans...</p>
+                    <a class="inter articleCardPicButton centerText fondBlanc noir">Lire plus</a>
                 </div>
             </div>
             <div class="articleCardPic columnDirection lisbonne">
                 <div class="articleCardPicText columnDirection Text">
                     <p class="roboto articleCardPicDate blanc centerText" >11/04/24</p>
                     <p class="roboto articleCardPicTitle blanc centerText">Séville : un voyage dans...</p>
-                    <button class="roboto articleCardPicButton noir">Lire plus</button>
+                    <a class="inter articleCardPicButton centerText fondBlanc noir">Lire plus</a>
                 </div>
             </div>
             <div class="articleCardPic columnDirection map">
                 <div class="articleCardPicText columnDirection">
-                    <p class="roboto articleCardPicDate blanc centerText" >11/04/24</p>
+                    <p class=" cenroboto articleCardPicDate blanc centerText" >11/04/24</p>
                     <p class=" roboto articleCardPicTitle blanc centerText">Séville : un voyage dans...</p>
-                    <button class="roboto articleCardPicButton noir">Lire plus</button>
+                    <a class="inter articleCardPicButton centerText fondBlanc noir">Lire plus</a>
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@
                 <p class="destinationP centerText">
                     Découvrez l'Espagne, une destination ensoleillée aux mille couleurs et saveurs, où chaque coin révèle une nouvelle aventure.
                 </p>
-                <button class="darkButton bd22 blanc">Voir</button>
+                <a class="inter navButton centerText bd22 blanc fondNoir">Voir</a>
             </div>
         </div>
         <div class="destination destinationPortugal mB90">
@@ -63,7 +63,7 @@
                 <p class="destinationP centerText">
                     Plongez dans l'atmosphère envoûtante du Portugal, où l'histoire et la beauté se retrouvent pour offrir une expérience de voyage incomparable.
                 </p>
-                <button class="darkButton bd22 blanc">Voir</button>
+                <a class="inter navButton centerText bd22 blanc fondNoir">Voir</a>
             </div>
         </div>
     </div>
@@ -74,7 +74,7 @@
             <p class="noir spacedP centerText">
                 Découvrez la section "Recettes d'Ailleurs", un voyage culinaire à travers le monde où chaque plat raconte une histoire, révélant les saveurs uniques et les traditions culinaires de différentes cultures. Laissez vous emporter par des recettes authentiques et exotiques qui éveilleront vos papilles à de nouveaux horizons gastronomiques.
             </p>
-            <button class="darkButton blanc recetteButton">Voir les recettes</button>
+            <a class="inter navButton centerText blanc recetteButton fondNoir">Voir les recettes</a>
         </div>
     </div>
     <div class="sectionCinq">
@@ -84,7 +84,7 @@
             <p class="destinationText columnDirection centerText">
                 Découvrez notre section "Conseils", votre compagnon idéal pour planifier des aventures sans stress. Trouvez des astuces pratiques, des conseils d'experts et des ressources utiles pour faciliter chaque étape de votre voyage, de la planification à la réalisation de souvenirs inoubliables.
             </p>
-            <button class="darkButton bd22 blanc">Voir les conseils</button>
+            <a class="inter navButton centerText bd22 blanc fondNoir">Voir les conseils</a>
         </div>
     </div>
     <div class="destination mB90">
@@ -95,7 +95,7 @@
             <p class="destinationP centerText">
                 Je suis Alexia, 22 ans, une aventurière passionnée qui explore l'Europe avec sa famille et son fiancé, avide de découvertes et de moments inoubliables.
             </p>
-            <button class="darkButton bd22 blanc">Lire plus</button>
+            <a class="inter navButton centerText bd22 blanc fondNoir">Lire plus</a>
         </div>
     </div>
 <?php include "nav.html" ?> </body> </html>

@@ -16,11 +16,11 @@
     </div>
 
     <div class="filtresBlog">
-        <button class="navButton classButton fondNoir bd22 blanc">Tous les articles</button>
-        <button class="navButton classButton fondNoir bd22 blanc">Portugal</button>
-        <button class="navButton classButton fondNoir bd22 blanc">Conseils</button>
-        <button class="navButton classButton fondNoir bd22 blanc">Recettes</button>
-        <button class="navButton classButton fondNoir bd22 blanc">Espagne</button>
+        <a class="centerText inter navButton classButton fondNoir bd22 blanc">Tous les articles</a>
+        <a class="centerText inter navButton classButton fondNoir bd22 blanc">Portugal</a>
+        <a class="centerText inter navButton classButton fondNoir bd22 blanc">Conseils</a>
+        <a class="centerText inter navButton classButton fondNoir bd22 blanc">Recettes</a>
+        <a class="centerText inter navButton classButton fondNoir bd22 blanc">Espagne</a>
     </div>
 
     <div class="sectionTwoBlog">
@@ -32,7 +32,7 @@
                 <p class="articleCardDescription roboto centerText">
                     Séville, joyau de l'Andalousie, est une ville qui captive les âmes avec son charme envoûtant et son ambiance vibrante. Nichée le long des rives ...
                 </p>
-                <button class="navButton articleCardDescButton fondNoir bd22 blanc">Lire plus</button>
+                <a class="centerText inter navButton articleCardDescButton fondNoir bd22 blanc">Lire plus</a>
             </div>
         </div>
 
@@ -44,7 +44,7 @@
                 <p class="articleCardDescription roboto centerText">
                     Séville, joyau de l'Andalousie, est une ville qui captive les âmes avec son charme envoûtant et son ambiance vibrante. Nichée le long des rives ...
                 </p>
-                <button class="navButton articleCardDescButton fondNoir bd22 blanc">Lire plus</button>
+                <a class="centerText inter navButton articleCardDescButton fondNoir bd22 blanc">Lire plus</a>
             </div>
         </div>
         <div class="articleCardDesc columnDirection border">
@@ -55,7 +55,7 @@
                 <p class="articleCardDescription roboto centerText">
                     Séville, joyau de l'Andalousie, est une ville qui captive les âmes avec son charme envoûtant et son ambiance vibrante. Nichée le long des rives ...
                 </p>
-                <button class="navButton articleCardDescButton fondNoir bd22 blanc">Lire plus</button>
+                <a class="centerText inter navButton articleCardDescButton fondNoir bd22 blanc">Lire plus</a>
             </div>
         </div>
         <div class="articleCardDesc columnDirection border">
@@ -66,7 +66,7 @@
                 <p class="articleCardDescription roboto centerText">
                     Séville, joyau de l'Andalousie, est une ville qui captive les âmes avec son charme envoûtant et son ambiance vibrante. Nichée le long des rives ...
                 </p>
-                <button class="navButton articleCardDescButton fondNoir bd22 blanc">Lire plus</button>
+                <a class="centerText inter navButton articleCardDescButton fondNoir bd22 blanc">Lire plus</a>
             </div>
         </div>
         <div class="articleCardDesc columnDirection border">
@@ -77,7 +77,7 @@
                 <p class="articleCardDescription roboto centerText">
                     Séville, joyau de l'Andalousie, est une ville qui captive les âmes avec son charme envoûtant et son ambiance vibrante. Nichée le long des rives ...
                 </p>
-                <button class="navButton articleCardDescButton fondNoir bd22 blanc">Lire plus</button>
+                <a class="centerText inter navButton articleCardDescButton fondNoir bd22 blanc">Lire plus</a>
             </div>
         </div>
         <div class="articleCardDesc columnDirection border">
@@ -88,7 +88,7 @@
                 <p class="articleCardDescription roboto centerText">
                     Séville, joyau de l'Andalousie, est une ville qui captive les âmes avec son charme envoûtant et son ambiance vibrante. Nichée le long des rives ...
                 </p>
-                <button class="navButton articleCardDescButton fondNoir bd22 blanc">Lire plus</button>
+                <a class="centerText inter navButton articleCardDescButton fondNoir bd22 blanc">Lire plus</a>
             </div>
         </div>
     </div>

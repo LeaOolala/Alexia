@@ -20,6 +20,9 @@ body{
     font-weight: 400;
     font-family: "Roboto", sans-serif;
 }
+.inter{
+    font-family: "Inter";
+}
 .bd22{
     border-radius: 22px;
 }
@@ -71,6 +74,9 @@ p{
 *{
     border-style: none;
 }
+a{
+    text-decoration: none;
+}
 .border{
     border: 1px solid var(--M3-sys-light-outline-variant, #CAC4D0);
 }
@@ -87,7 +93,8 @@ p{
 .navButton{
     /*padding: 10px 25px 10px 25px;*/
     width: 160px;
-    height: 38px;
+    height: 30px;
+    padding-top: 8px;
 }
 .darkButton{
     background: #383838;
