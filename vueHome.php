@@ -10,11 +10,13 @@
     <title>Vue Composant</title>
 </head> <body> 
     
-    <div class="sectionOneHome">
+    <!-- SECTION UN-->
+    <div class="sectionOneHome columnDirection">
         <?php include "nav.html" ?>
-        <h1 class="blanc centerText">Les petis voyages d'Alexia</h1>
+        <h1 class="blanc centerText headerImage">Les petits voyages d'Alexia</h1>
     </div>
 
+    <!--DERNIERS ARTICLES-->
     <div class="sectionTwoHome columnDirection">
         <h2 class="noir centerText">Derniers articles</h2>
         <div class="homeCardsContainer">
@@ -22,7 +24,7 @@
                 <div class="articleCardPicText columnDirection">
                     <p class="roboto articleCardPicDate blanc centerText" >11/04/24</p>
                     <p class="roboto articleCardPicTitle blanc centerText">Séville : un voyage dans...</p>
-                    <a class="inter articleCardPicButton centerText fondBlanc noir">Lire plus</a>
+                    <a href="vueArticleSeville.php" class="inter articleCardPicButton centerText fondBlanc noir">Lire plus</a>
                 </div>
             </div>
             <div class="articleCardPic columnDirection lisbonne">
@@ -42,6 +44,7 @@
         </div>
     </div>
 
+    <!--DESTINATIONS-->
     <div class="sectionTroisHome columnDirection">
         <h2 class="noir centerText">Destinations</h2>
         <div class="destination">
@@ -68,6 +71,7 @@
         </div>
     </div>
 
+    <!--RECETTES-->
     <div class="sectionQuatreHome columnDirection paella">
         <h2 class="blanc centerText">Recettes</h2>
         <div class="recetteText columnDirection">
@@ -77,6 +81,8 @@
             <a class="inter navButton centerText blanc recetteButton fondNoir">Voir les recettes</a>
         </div>
     </div>
+
+    <!--ORGANISATION-->
     <div class="sectionCinq">
         <div class="gallerie"></div>
         <div class="destinationText columnDirection">
@@ -87,6 +93,8 @@
             <a class="inter navButton centerText bd22 blanc fondNoir">Voir les conseils</a>
         </div>
     </div>
+
+    <!--A PROPOS-->
     <div class="destination mB90">
         <div class="destinationPic about">
         </div>
@@ -98,4 +106,6 @@
             <a class="inter navButton centerText bd22 blanc fondNoir">Lire plus</a>
         </div>
     </div>
+
+    <!--NAV-->
 <?php include "nav.html" ?> </body> </html>

@@ -13,7 +13,7 @@
 <body class="connexionBody columnDirection vhFull"> <?php include "nav.html" ?>
 
     <div class="formContainer columnDirection">
-        <h1 class="noir formH1 centerText">Inscription</h1>
+        <h1 class="noir smallH1 centerText">Inscription</h1>
         <form action="" method="post" class="columnDirection">
 
             <label for="email">E-mail</label></br>

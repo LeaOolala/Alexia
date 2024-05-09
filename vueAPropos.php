@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="sectionOneBlog apropos">
+    <div class="sectionOneBlog vwFull apropos">
         <?php include "nav.html" ?>
         <h1 class="blanc centerText">Le blog</h1>
     </div>

@@ -36,8 +36,10 @@ h1{
     font-family: "Inter";
     font-size: 96px;
 }
-.formH1{
+.smallH1{
     font-size: 64px;
+    padding-top: 60px;
+    margin-top: 45px;
 }
 h2{
     font-family: "Inter";
@@ -86,9 +88,26 @@ a{
 .vhFull{
     height: 100vh;
 }
-.columnDirection{
-    flex-direction: column;
+.vwFull{
+    width: 100vw;
 }
+.columnDirection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.headerImage{
+    align-self: center;
+    justify-self: center;
+    padding-top: 20%;
+}
+.articleContent{
+    display:flex;
+    width: 70%;
+    justify-content: center;
+    gap: 33px;
+}
+
 /* Boutons */
 .navButton{
     /*padding: 10px 25px 10px 25px;*/
@@ -126,6 +145,7 @@ a{
 /* Sections */
 .sectionOneHome{
     height: 100vh;
+    width: 100vw;
     background: url("homeHeader.jpg") lightgray 50% / cover no-repeat;
 }
 .sectionTwoHome{
@@ -149,9 +169,19 @@ a{
 }
 
 /* blog */
+.intro{
+    display: flex;
+    width: 75%;
+    height: 123px;
+    padding: 18px 34px 17px 33px;
+    align-self: center;
+    align-items: center;
+    border-left: 3px solid #383838;
+}
 .sectionOneBlog{
-    height: 361px;
-    background: url("ble.jpg") lightgray 50% / cover no-repeat;
+    height: 300px;
+    object-fit: cover;
+    /*object-position: 0px -626.979px;*/
 }
 .sectionTwoBlog{
     gap: 92px 82px;
@@ -224,8 +254,8 @@ a{
     width: 65%;
 }
 /* Background images */
-.seville{
-    background: url("Séville.jpg") lightgray 50% / cover no-repeat;
+.ble{
+    background: url("ble.jpg") lightgray 50% / cover no-repeat;
 }
 .algarve{
     background: url("Algarve.jpg") lightgray 50% / cover no-repeat;
@@ -256,6 +286,9 @@ a{
 }
 .profil{
     background: url("profilePic.jpg") lightgray 50% / cover no-repeat;
+}
+.seville{
+    background: url("Séville.jpg") lightgray 50% / cover no-repeat;
 }
 
 /* nav */

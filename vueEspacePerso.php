@@ -15,7 +15,7 @@
     <div class="espacePerso">
 
         <div class="espacePDroite columnDirection border">
-            <h1 class="formH1 noir centerText">Espace perso</h1>
+            <h1 class="smallH1 noir centerText">Espace perso</h1>
             <table class="comment border">
                 <tbody>
                     <tr>

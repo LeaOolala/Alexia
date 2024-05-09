@@ -10,11 +10,13 @@
     <title>Vue Composant</title>
 </head> <body>
 
-    <div class="sectionOneBlog ">
+    <!--SECTION ONE-->
+    <div class="sectionOneBlog vwFull ble">
         <?php include "nav.html" ?>
         <h1 class="blanc centerText">Le blog</h1>
     </div>
 
+    <!--FILTRES BLOG-->
     <div class="filtresBlog">
         <a class="centerText inter navButton classButton fondNoir bd22 blanc">Tous les articles</a>
         <a class="centerText inter navButton classButton fondNoir bd22 blanc">Portugal</a>
@@ -23,6 +25,7 @@
         <a class="centerText inter navButton classButton fondNoir bd22 blanc">Espagne</a>
     </div>
 
+    <!--ARTICLES-->
     <div class="sectionTwoBlog">
         <div class="articleCardDesc columnDirection border">
             <div class="articleCardDescPic seville"></div>
@@ -32,7 +35,7 @@
                 <p class="articleCardDescription roboto centerText">
                     Séville, joyau de l'Andalousie, est une ville qui captive les âmes avec son charme envoûtant et son ambiance vibrante. Nichée le long des rives ...
                 </p>
-                <a class="centerText inter navButton articleCardDescButton fondNoir bd22 blanc">Lire plus</a>
+                <a href="vueArticleSeville.php" class="centerText inter navButton articleCardDescButton fondNoir bd22 blanc">Lire plus</a>
             </div>
         </div>
 
@@ -92,4 +95,6 @@
             </div>
         </div>
     </div>
+
+    <!--NAV-->
 <?php include "nav.html" ?> </body> </html>
