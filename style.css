@@ -16,6 +16,9 @@ body{
 .fondNoir{
     background-color: #343E46;
 }
+.fondGris{
+    background: #D9D9D9;
+}
 .roboto{
     font-weight: 400;
     font-family: "Roboto", sans-serif;
@@ -29,8 +32,14 @@ body{
 .mB90{
     margin-bottom: 90px;
 }
+.h84{
+    height: 86.8%;
+}
 .centerText{
     text-align: center;
+}
+.rightText{
+    text-align: end;
 }
 h1{
     font-family: "Inter";
@@ -38,7 +47,6 @@ h1{
 }
 .smallH1{
     font-size: 64px;
-    padding-top: 60px;
     margin-top: 45px;
 }
 h2{
@@ -57,7 +65,8 @@ h4{
     line-height: 28px;
     margin: 0;
 }
-p{
+p,
+li{
     font-family: Inter;
     font-size: 16px;
 }
@@ -82,6 +91,9 @@ a{
 .border{
     border: 1px solid var(--M3-sys-light-outline-variant, #CAC4D0);
 }
+.bdLeft{
+    border-left: 3px solid #383838;
+}
 .spacedP{
     line-height: 261%;
 }
@@ -91,10 +103,29 @@ a{
 .vwFull{
     width: 100vw;
 }
+.w75{
+    width: 75%;
+}
+.w50{
+    width: 55%;
+}
+.pg50{
+    padding: 50px;
+}
+.pg43{
+    padding: 43px;
+}
+.pg0{
+    padding-top: 0;
+    padding-bottom: 0;
+}
 .columnDirection{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.alignLeft{
+    align-items: flex-start;
 }
 .headerImage{
     align-self: center;
@@ -103,11 +134,22 @@ a{
 }
 .articleContent{
     display:flex;
-    width: 70%;
     justify-content: center;
+    align-items: center;
     gap: 33px;
 }
-
+.liGap{
+    display: flex;
+    gap: 70px;
+}
+.gap5{
+    display: flex;
+    gap: 5px;
+}
+.gap25{
+    display: flex;
+    gap: 25px;
+}
 /* Boutons */
 .navButton{
     /*padding: 10px 25px 10px 25px;*/
@@ -134,9 +176,12 @@ a{
     padding: 10px 24px;
     justify-content: center;
     border-radius: 22px;
+    width: 85%;
 }
 .classButton{
     width:18%;
+    min-width: calc((100% - 4ch)/5);
+    max-width: fit-content;
 }
 .articleCardDescButton{
     width: 100%;
@@ -171,12 +216,10 @@ a{
 /* blog */
 .intro{
     display: flex;
-    width: 75%;
     height: 123px;
     padding: 18px 34px 17px 33px;
     align-self: center;
     align-items: center;
-    border-left: 3px solid #383838;
 }
 .sectionOneBlog{
     height: 300px;
@@ -198,6 +241,7 @@ a{
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 /* A propos */
 .aproposContent{
@@ -228,32 +272,44 @@ a{
     display: flex;
     flex-direction: row-reverse;
     width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
 }
 .espacePDroite{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px;
     width: 100%;
-    height: 85%;
-
+    height: 100%;
 }
 .espacePGauche{
     width: 50%;
-    height: 85%;
-    margin: 50px;
 }
 .espacePPic{
-    width: 300px;
-    height: 300px;
+    width: 380px;
+    height: 250px;
+    object-fit: cover;
 }
-.comment{
-    width: 65%;
+tr{
+    display: flex;
+    padding: 13px;
 }
+th,
+td,
+tr{
+    width: 380px;
+    box-sizing: border-box;
+}
+.commentTable > td,
+.commentTable > th,
+.commentTable >tr,
+.commentTable {
+    width: 545px;
+}
+
 /* Background images */
+.background{
+    background: lightgray 50% / cover no-repeat;
+}
 .ble{
     background: url("ble.jpg") lightgray 50% / cover no-repeat;
 }
@@ -284,11 +340,11 @@ a{
 .ecris{
     background: url("ecris.jpg") lightgray 50% / cover no-repeat;
 }
-.profil{
-    background: url("profilePic.jpg") lightgray 50% / cover no-repeat;
-}
 .seville{
     background: url("Séville.jpg") lightgray 50% / cover no-repeat;
+}
+.backpack{
+    background: url("backpack.jpg") lightgray 50% / cover no-repeat;
 }
 
 /* nav */
@@ -328,6 +384,11 @@ input{
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
     background-color: #F5F5F5;
     margin-bottom: 38px;
+    width: 425px;
+    font-family: "Roboto", sans-serif;
+    padding-left: 20px;
+    box-sizing: border-box;
+    font-size: 18px;
 }
 .submit{
     width: 240px;
@@ -367,7 +428,7 @@ input{
 }
 /* article card desc */
 .articleCardDesc{
-    height: 683px;
+    height: 585px;
     width: 360px;
     border-radius: 12px;
     display: flex;

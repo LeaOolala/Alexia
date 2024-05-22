@@ -1,3 +1,17 @@
+<?php
+// démarrer la session
+session_start();
+
+// Connexion à la bdd
+function connectDB(){
+    $host = 'localhost';
+    $dbname = 'lpva';
+    $login = 'root';
+    $mdp = '';
+    return new PDO("mysql:host=$host; dbname=$dbname; charset=utf8", $login, $mdp);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,29 +24,102 @@
     <title>Vue Composant</title>
 </head>
 
-<body class="connexionBody columnDirection vhFull"> <?php include "nav.html" ?>
-
+<!-- HEADER-->
+<body class="connexionBody columnDirection"> <?php include "nav.html" ?>
     <div class="espacePerso">
 
-        <div class="espacePDroite columnDirection border">
-            <h1 class="smallH1 noir centerText">Espace perso</h1>
-            <table class="comment border">
-                <tbody>
-                    <tr>
-                        <td class="commentDate roboto">09/10/73</td>
-                        <td><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-                            <path d="M4.16667 16.3919H5.35417L13.5 8.24609L12.3125 7.05859L4.16667 15.2044V16.3919ZM2.5 18.0586V14.5169L13.5 3.53776C13.6667 3.38498 13.8507 3.26693 14.0521 3.18359C14.2535 3.10026 14.4653 3.05859 14.6875 3.05859C14.9097 3.05859 15.125 3.10026 15.3333 3.18359C15.5417 3.26693 15.7222 3.39193 15.875 3.55859L17.0208 4.72526C17.1875 4.87804 17.309 5.05859 17.3854 5.26693C17.4618 5.47526 17.5 5.68359 17.5 5.89193C17.5 6.11415 17.4618 6.32595 17.3854 6.52734C17.309 6.72873 17.1875 6.91276 17.0208 7.07943L6.04167 18.0586H2.5ZM12.8958 7.66276L12.3125 7.05859L13.5 8.24609L12.8958 7.66276Z" fill="#343E46"/>
-                          </svg></td>
-                    </tr>
-                    <tr>
-                        <td>Blabla bla blabla</td>
-                    </tr>
-                </tbody>
+        <!--DROITE-->
+        <div class=" liGap espacePDroite columnDirection pg50">
+            <h1 class="smallH1 noir centerText pg43">Espace perso</h1>
+            <!--TABLE-->
+            <table class="border commentTable">
+
+                <!--header-->
+                <tr class="fondNoir commentTable">
+                    <th colspan="2" class="blanc roboto">Historique de tes commentaires</th>
+                </tr>
+
+                <!--COMMENT ONE-->
+                <tr class="commentTable pg0">
+                    <td class="roboto date">13-04</td>
+                    <td class="rightText crayon"><img src="crayon.svg" alt="modifier"></td>
+                </tr>
+                <tr class="commentTable pg0">
+                    <td colspan="2" class="roboto">
+                        Blabla bla bla 
+                    </td>
+                </tr>
+
+                <!--COMMENT TWO-->
+                <tr class="commentTable fondGris pg0">
+                    <td class="roboto date">20-04</td>
+                    <td class="rightText crayon"><img src="crayon.svg" alt="modifier"></td>
+                </tr>
+                <tr class="commentTable fondGris pg0">
+                    <td colspan="2" class="roboto">
+                        Tata
+                    </td>
+                </tr>
+                
+                <!--COMMENT THREE-->
+                <tr class="commentTable pg0">
+                    <td class="roboto date pg0">02-04</td>
+                    <td class="rightText crayon pg0"><img src="crayon.svg" alt="modifier"></td>
+                </tr>
+                <tr class="commentTable pg0">
+                    <td colspan="2" class="roboto">
+                    Et les melons qui viennent d’Espagne en plein Décembre, c’est beau HEIN !
+                    </td>
+                </tr>
             </table>
         </div>
-    
-        <div class="espacePGauche">
-            <div class="profil bd22 border espacePPic"></div>
-        </div>
         
-</div> <?php include "nav.html" ?> </body> </html>
+        <!--GAUCHE-->
+        <div class="liGap espacePGauche h84 pg50 columnDirection">
+            <img src="profilePic.jpg" alt="photo de profil" class="espacePPic bd22 border">
+
+            <!--TABLE-->
+            <table class="border">
+                <tr class="fondNoir">
+                    <th colspan="2" class="blanc roboto">Tes informations :</th>
+                </tr>
+
+                <!--nom utilisateur-->
+                <tr class="fondGris">
+                    <td colspan="2" class="roboto">nom d'utilisateur :</td>
+                </tr>
+                <tr>
+                    <td class="roboto">Sawyer</td>
+                    <td class="rightText crayon"><img src="crayon.svg" alt="modifier"></td>
+                </tr>
+
+                <!--mail-->
+                <tr class="fondGris">
+                    <td colspan="2" class="roboto">adresse-mail :</td>
+                </tr>
+                <tr>
+                    <td class="roboto">tom.hiddleston@lokipresident.com</td>
+                    <td class="rightText crayon"><img src="crayon.svg" alt="modifier"></td>
+                </tr>
+
+                <!--prenom-->
+                <tr class="fondGris">
+                    <td colspan="2" class="roboto">prénom :</td>
+                </tr>
+                <tr>
+                    <td class="roboto">Sawyer</td>
+                    <td class="rightText crayon"><img src="crayon.svg" alt="modifier"></td>
+                </tr>
+
+                <!--prenom-->
+                <tr class="fondGris">
+                    <td colspan="2" class="roboto">prénom :</td>
+                </tr>
+                <tr>
+                    <td class="roboto">Sawyer</td>
+                    <td class="rightText crayon"><img src="crayon.svg" alt="modifier"></td>
+                </tr>
+            </table>
+
+</div></div>
+<?php include "nav.html" ?> </body> </html>
