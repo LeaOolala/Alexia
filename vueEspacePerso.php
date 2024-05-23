@@ -11,6 +11,7 @@ function connectDB(){
     return new PDO("mysql:host=$host; dbname=$dbname; charset=utf8", $login, $mdp);
 }
 
+//VISUEL PAGE ESPACE PERSO
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -89,7 +90,7 @@ function connectDB(){
                     <td colspan="2" class="roboto">nom d'utilisateur :</td>
                 </tr>
                 <tr>
-                    <td class="roboto">Sawyer</td>
+                    <td class="roboto"><?php echo "{$_SESSION["user_name"]}" ?></td>
                     <td class="rightText crayon"><img src="crayon.svg" alt="modifier"></td>
                 </tr>
 
@@ -98,25 +99,16 @@ function connectDB(){
                     <td colspan="2" class="roboto">adresse-mail :</td>
                 </tr>
                 <tr>
-                    <td class="roboto">tom.hiddleston@lokipresident.com</td>
+                    <td class="roboto"><?php echo "{$_SESSION["user_email"]}" ?></td>
                     <td class="rightText crayon"><img src="crayon.svg" alt="modifier"></td>
                 </tr>
 
-                <!--prenom-->
+                <!--mdp-->
                 <tr class="fondGris">
-                    <td colspan="2" class="roboto">prénom :</td>
+                    <td colspan="2" class="roboto">mot de passe :</td>
                 </tr>
                 <tr>
-                    <td class="roboto">Sawyer</td>
-                    <td class="rightText crayon"><img src="crayon.svg" alt="modifier"></td>
-                </tr>
-
-                <!--prenom-->
-                <tr class="fondGris">
-                    <td colspan="2" class="roboto">prénom :</td>
-                </tr>
-                <tr>
-                    <td class="roboto">Sawyer</td>
+                    <td class="roboto">****</td>
                     <td class="rightText crayon"><img src="crayon.svg" alt="modifier"></td>
                 </tr>
             </table>

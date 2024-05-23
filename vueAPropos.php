@@ -1,3 +1,8 @@
+<?php
+// Démarrer la session au début du script
+session_start(); 
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>

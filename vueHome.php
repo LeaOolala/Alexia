@@ -1,4 +1,7 @@
 <?php
+// Démarrer la session au début du script
+session_start(); 
+
 function connectDB(){
     $host = 'localhost';
     $dbname = 'lpva';

@@ -25,9 +25,9 @@ if(isset($_POST["connexion"])){
     $hashedMdpUserDb = $hashedMdp->fetch(PDO::FETCH_ASSOC);
 
     // test
-    echo $hashedMdpUserDb["user_password"];
-    echo"<hr>";
-    print_r($mdpConnexion);
+    // echo $hashedMdpUserDb["user_password"];
+    // echo"<hr>";
+    // print_r($mdpConnexion);
 
 
     // VERIF MDP
@@ -37,10 +37,23 @@ if(isset($_POST["connexion"])){
         // Mot de passe valide, stocke les informations dans la session
         $_SESSION['user_password'] = $hashedMdpUserDb["user_password"];
         $_SESSION['user_email'] = $email;
+
+        //cherche user name
+        $nomUtilisateurPrep = connectDB()->prepare("SELECT user_name FROM user WHERE user_email = :user_email ");
+        // bind param
+        $nomUtilisateurPrep->bindParam(":user_email", $email) ;
+        // execute
+        $nomUtilisateurPrep->execute();
+        // fetch
+        $nomUtilisateur = $nomUtilisateurPrep->fetch(PDO::FETCH_ASSOC);
+        // récup user name pour plus tard
+        $_SESSION['user_name'] = $nomUtilisateur["user_name"];
+
+        // test
         echo 'Password is valid!';
         
         // Redirection vers la page d'espace personnel
-        header("Location: espace_personnel.php");
+        header("Location: vueEspacePerso.php");
         exit();
     } 
     else {

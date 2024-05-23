@@ -20,6 +20,7 @@
 
     $reponse = $req->fetch(PDO::FETCH_ASSOC);
 
+//VISUEL PAGE article
 ?>
 <!DOCTYPE html> <html lang="fr"> 
     <head>

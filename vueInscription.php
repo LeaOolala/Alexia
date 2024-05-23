@@ -1,4 +1,7 @@
 <?php
+// Démarrer la session au début du script
+session_start(); 
+
 
 // Connexion à la bdd
 function connectDB(){
@@ -26,7 +29,7 @@ if(isset($_POST["inscriptionValider"])){
 
         //inscris infos en bdd
 
-        // preparde
+        // prepare
         $insertPrepare = connectDB()->prepare("INSERT INTO user( user_email, user_name, user_password)
         VALUES ( :user_email, :user_name, :user_password)");
 
