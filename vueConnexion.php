@@ -83,10 +83,10 @@ else{
             <form action="vueConnexion.php" method="post" class="columnDirection">
     
                 <label for="email">E-mail</label></br>
-                <input type="email" name="email" autofocus class="bd22"></br>
+                <input type="email" name="email" class="bd22" autofocus required></br>
     
                 <label for="mdpConnexion">Mot de passe</label></br>
-                <input type="password" name="mdpConnexion" class="bd22"></br>
+                <input type="password" name="mdpConnexion" class="bd22" required></br>
     
                 <p class="centerText">Pas encore de compte ? <a href="vueInscription.php ">Inscrivez-vous ici</a></p>
     

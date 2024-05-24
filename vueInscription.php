@@ -71,16 +71,16 @@ else{
             <form action="" method="post" class="columnDirection">
     
                 <label for="email">E-mail</label></br>
-                <input type="email" name="email" autofocus class="bd22"></br>
+                <input type="email" name="email" autofocus class="bd22" required autofocus></br>
     
                 <label for="nomUtilisateur">Nom d'utilisateur</label></br>
-                <input type="text" name="nomUtilisateur" class="bd22"></br>
+                <input type="text" name="nomUtilisateur" class="bd22" minlength="3" required></br>
     
                 <label for="mdp">Mot de passe</label></br>
-                <input type="password" name="mdp" class="bd22"></br>
+                <input type="password" name="mdp" class="bd22" minlength="8" required></br>
     
                 <label for="mdpConfirm">Confirmer le mot de passe</label></br>
-                <input type="password" name="mdpConfirm" class="bd22"></br>
+                <input type="password" name="mdpConfirm" class="bd22" minlength="8" required></br>
     
                 <input type="submit" name="inscriptionValider" value="Valider" class="bd22 submit blanc fondNoir">
             </form>
