@@ -17,7 +17,7 @@ if(isset($_POST["connexion"])){
     $mdpConnexion= htmlspecialchars($_POST["mdpConnexion"]); 
 
     // CHERCHE MDP BDD
-    $hashedMdp = connectDB()->prepare("SELECT user_password FROM `user` WHERE user_email = :user_email ");
+    $hashedMdp = connectDB()->prepare("SELECT user_password FROM `user` WHERE user_email = :user_email");
     // bind param
     $hashedMdp->bindParam(":user_email", $email) ;
     // execute
@@ -25,13 +25,13 @@ if(isset($_POST["connexion"])){
     $hashedMdpUserDb = $hashedMdp->fetch(PDO::FETCH_ASSOC);
 
     // test
-    // echo $hashedMdpUserDb["user_password"];
-    // echo"<hr>";
-    // print_r($mdpConnexion);
+    echo $hashedMdpUserDb["user_password"];
+    echo"<hr>";
+    print_r($mdpConnexion);
 
 
     // VERIF MDP
-    if (password_verify($mdpConnexion , $hashedMdpUserDb["user_password"])) {
+    if (password_verify($mdpConnexion,$hashedMdpUserDb["user_password"])) {
 
 
         // Mot de passe valide, stocke les informations dans la session
@@ -80,7 +80,7 @@ else{
     
         <div class="formContainer columnDirection">
             <h1 class="noir smallH1 centerText">Connexion</h1>
-            <form action="" method="post" class="columnDirection">
+            <form action="vueConnexion.php" method="post" class="columnDirection">
     
                 <label for="email">E-mail</label></br>
                 <input type="email" name="email" autofocus class="bd22"></br>

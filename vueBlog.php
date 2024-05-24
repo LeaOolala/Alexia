@@ -11,7 +11,7 @@ function connectDB(){
     return new PDO("mysql:host=$host; dbname=$dbname; charset=utf8", $login, $mdp);
 }
 
-// récup derniers articles
+// récup tous les derniers articles
 $req = connectDB()->prepare("SELECT * FROM `article` ORDER BY `article_birth`");
 $req->execute();
 $reponses = $req->fetchAll(PDO::FETCH_ASSOC);
@@ -37,14 +37,50 @@ $reponses = $req->fetchAll(PDO::FETCH_ASSOC);
 
     <!--FILTRES BLOG-->
     <div class="filtresBlog">
-        <a class="centerText inter navButton classButton fondNoir bd22 blanc">Tous les articles</a>
-        <a class="centerText inter navButton classButton fondNoir bd22 blanc">Portugal</a>
-        <a class="centerText inter navButton classButton fondNoir bd22 blanc">Conseils</a>
-        <a class="centerText inter navButton classButton fondNoir bd22 blanc">Recettes</a>
-        <a class="centerText inter navButton classButton fondNoir bd22 blanc">Espagne</a>
+        <form action="vueBlog.php" class="navButton" method="post"><input type="submit" name="filtre" value="Tous les articles" class="centerText inter navButton classButton fondNoir bd22 blanc" ></form>
+        <form action="vueBlog.php" class="navButton" method="post"><input type="submit" name="filtre" value="Portugal" class="centerText inter navButton classButton fondNoir bd22 blanc" ></form>
+        <form action="vueBlog.php" class="navButton" method="post"><input type="submit" name="filtre" value="Conseils" class="centerText inter navButton classButton fondNoir bd22 blanc" ></form>
+        <form action="vueBlog.php" class="navButton" method="post"><input type="submit" name="filtre" value="Recettes" class="centerText inter navButton classButton fondNoir bd22 blanc" ></form>
+        <form action="vueBlog.php" class="navButton" method="post"><input type="submit" name="filtre" value="Espagne" class="centerText inter navButton classButton fondNoir bd22 blanc" ></form>
     </div>
 
-    <!--ARTICLES-->
+    <!-- récup filtre submit -->
+    <?php
+
+        if(isset($_POST["filtre"])){
+            $filtre = $_POST["filtre"];
+            
+            // switch cases
+            switch($filtre){
+
+                case "Portugal":
+                    $req = connectDB()->prepare("SELECT * FROM `article` Where `article_pays`=2");
+                    $req->execute();
+                    $reponses = $req->fetchAll(PDO::FETCH_ASSOC);
+                    break;
+                case "Espagne":
+                    $req = connectDB()->prepare("SELECT * FROM `article` Where `article_pays`=1");
+                    $req->execute();
+                    $reponses = $req->fetchAll(PDO::FETCH_ASSOC);
+                    break;
+                case "Recettes":
+                    $req = connectDB()->prepare("SELECT * FROM `article` Where `article_type`=3");
+                    $req->execute();
+                    $reponses = $req->fetchAll(PDO::FETCH_ASSOC);
+                    break;
+                case "Conseils":
+                    $req = connectDB()->prepare("SELECT * FROM `article` Where `article_type`=2");
+                    $req->execute();
+                    $reponses = $req->fetchAll(PDO::FETCH_ASSOC);
+                    break;
+                case "Tous les articles":
+                    "";
+                    break;
+            }  
+        }
+
+
+    ?><!--ARTICLES-->
     <div class="sectionTwoBlog">
         <?php
             // boucler sur articles

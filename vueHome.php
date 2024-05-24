@@ -38,7 +38,7 @@ $reponse = $req->fetchAll(PDO::FETCH_ASSOC);
     <!--DERNIERS ARTICLES-->
     <div class="sectionTwoHome columnDirection">
         <h2 class="noir centerText">Derniers articles</h2>
-        <div class="homeCardsContainer">
+        <div class="homeCardsContainer wrap">
 
         <!-- boucle template article *3  -->
         <?php
@@ -60,9 +60,8 @@ $reponse = $req->fetchAll(PDO::FETCH_ASSOC);
     <!--DESTINATIONS-->
     <div class="sectionTroisHome columnDirection">
         <h2 class="noir centerText">Destinations</h2>
-        <div class="destination">
-            <div class="destinationPic chateau">
-            </div>
+        <div class="destination vwFull">
+            <img src="chateau.jpg" alt="chateau" class="destinationPic">
             <div class="destinationText columnDirection">
                 <h3 class="noir centerText">Espagne</h3>
                 <p class="destinationP centerText">

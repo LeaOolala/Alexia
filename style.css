@@ -47,7 +47,7 @@ h1{
 }
 .smallH1{
     font-size: 64px;
-    margin-top: 45px;
+    padding-top: 45px;
 }
 h2{
     font-family: "Inter";
@@ -150,6 +150,9 @@ a{
     display: flex;
     gap: 25px;
 }
+.wrap{
+    flex-wrap: wrap;
+}
 /* Boutons */
 .navButton{
     /*padding: 10px 25px 10px 25px;*/
@@ -179,9 +182,10 @@ a{
     width: 85%;
 }
 .classButton{
-    width:18%;
-    min-width: calc((100% - 4ch)/5);
-    max-width: fit-content;
+    width: 169px;
+    height: 38px;
+    text-align: center;
+    padding: 0;
 }
 .articleCardDescButton{
     width: 100%;
@@ -195,12 +199,12 @@ a{
 }
 .sectionTwoHome{
     display: flex;
-    padding: 90px;
+    padding: 90px 30px 90px 30px;
     gap: 90px;
 }
 .homeCardsContainer{
     display: flex;
-    gap: 108px;
+    gap: 80px;
     justify-content: center;
 }
 .sectionTroisHome{
@@ -217,7 +221,7 @@ a{
 .intro{
     display: flex;
     height: 123px;
-    padding: 18px 34px 17px 33px;
+    margin: 18px 34px 17px 33px;
     align-self: center;
     align-items: center;
 }
@@ -242,6 +246,14 @@ a{
     justify-content: space-between;
     box-sizing: border-box;
     flex-wrap: wrap;
+    /* flex-direction: row; */
+    gap: 10px;
+}
+form.navButton{
+    max-width: 169px;
+    height: 38px;
+    margin: 0;
+    padding: 0;
 }
 /* A propos */
 .aproposContent{
@@ -321,9 +333,6 @@ tr{
 }
 .map{
     background: url("map.jpg") lightgray 50% / cover no-repeat;
-}
-.chateau{
-    background: url("chateau.jpg") lightgray 50% / cover no-repeat;
 }
 .piscine{
     background: url("piscine.jpg") lightgray 50% / cover no-repeat;
@@ -462,12 +471,13 @@ input{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: fit-content;
 
 }
 .destinationPic{
-    width: 772px;
+    object-fit: cover;
+    min-width: 20vw;
     height: 453px;
+    margin: 0 10px 0 10px ;
 }
 .destinationText{
     display: flex;
@@ -475,10 +485,10 @@ input{
     justify-content: center;
     padding: 45px 67px;
     gap: 41px;
-    max-width: 821px;
+    max-width: 80%;
 }
 .destinationP{
-    width: 472px;
+    max-width: 472px;
 }
 div .destinationPortugal{
     flex-direction: row-reverse;
@@ -509,3 +519,59 @@ div .destinationPortugal{
 .recetteButton{
     justify-content: flex-end;
 }
+/* MEDIA QUERIES */
+@media (width < 674px) {
+    h1,
+    smallH1{
+        font-size: 55px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    .articleCardPic{
+        min-width: 20vw;
+        max-width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .articleCardPicText{
+        width: 60vw;
+    }
+    .destinationPic{
+        width: 100px;
+    }
+
+}
+@media(width < 625px){
+    .destinationPic{
+        display: none;
+    }
+    .sectionTroisHome{
+        gap: 5px;
+    }
+    .destinationText{
+        background-color: #F5F5F5;
+        padding: 30px 57px;
+    }
+}
+@media (width < 394px){
+    .articleCardPic{
+        max-width: 480px;
+    }
+    .articleCardPicText {
+        width: 140px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 33px;
+    }
+    smallH1{
+        font-size: 38px;
+    } 
+    .destinationPic{
+        display: none;
+    }
+} 
