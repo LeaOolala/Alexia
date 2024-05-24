@@ -1,7 +1,4 @@
-<?php
-// Démarrer la session au début du script
-session_start(); 
-
+<?php 
 
 // Connexion à la bdd
 function connectDB(){
@@ -67,7 +64,7 @@ else{
         <title>Vue Composant</title>
     </head>
     
-    <body> <?php include "nav.html" ?>
+    <body> <?php include "nav.php" ?>
     
         <div class="formContainer columnDirection">
             <h1 class="noir smallH1 centerText">Inscription</h1>
@@ -88,4 +85,4 @@ else{
                 <input type="submit" name="inscriptionValider" value="Valider" class="bd22 submit blanc fondNoir">
             </form>
         </div>
-<?php include "nav.html" ?> </body> </html> <?php } ?>
+<?php include "nav.php" ?> </body> </html> <?php } ?>

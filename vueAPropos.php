@@ -1,8 +1,3 @@
-<?php
-// Démarrer la session au début du script
-session_start(); 
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -17,7 +12,7 @@ session_start();
 
 <body>
     <div class="sectionOneBlog vwFull apropos">
-        <?php include "nav.html" ?>
+        <?php include "nav.php" ?>
         <h1 class="blanc centerText">Le blog</h1>
     </div>
 
@@ -31,4 +26,4 @@ session_start();
             </p>
         </div>
     </div>
-<?php include "nav.html" ?> </body> </html>
+<?php include "nav.php" ?> </body> </html>

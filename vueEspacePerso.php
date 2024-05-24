@@ -1,6 +1,11 @@
 <?php
-// démarrer la session
-session_start();
+// Démarrer la session au début du script
+session_start() ;
+
+// avant tout, si pas connecté, renvoie page de connexion
+if (!isset($_SESSION['user_name'])){
+    header('Location: vueConnexion.php');
+}
 
 // Connexion à la bdd
 function connectDB(){
@@ -10,6 +15,23 @@ function connectDB(){
     $mdp = '';
     return new PDO("mysql:host=$host; dbname=$dbname; charset=utf8", $login, $mdp);
 }
+//DECONNEXION
+function deconnexion()
+{
+    if (isset($_SESSION['user_name'])) {
+        session_unset();
+        session_destroy();
+        setcookie(session_name(), '', time() - 3600, '/');  // Unset le cookie
+    }
+
+    // header('Location:' . "http://" . $_SERVER["SERVER_NAME"] . $_SERVER["PHP_SELF"]);
+    header('Location: vueHome.php'); // Redirect to site root (adjust if needed)
+    exit();
+}
+if (isset($_GET['deconnexion'])){
+    deconnexion();
+}
+
 
 //VISUEL PAGE ESPACE PERSO
 ?>
@@ -26,7 +48,7 @@ function connectDB(){
 </head>
 
 <!-- HEADER-->
-<body class="connexionBody columnDirection"> <?php include "nav.html" ?>
+<body class="connexionBody columnDirection"> <?php include "nav.php" ?>
     <div class="espacePerso">
 
         <!--DROITE-->
@@ -73,6 +95,8 @@ function connectDB(){
                     </td>
                 </tr>
             </table>
+            <form action="vueEspacePerso.php" class="navButton" method="get"><input type="submit" name="deconnexion" value="deconnexion" class="centerText inter navButton classButton fondNoir bd22 blanc" ></form>
+
         </div>
         
         <!--GAUCHE-->
@@ -90,7 +114,7 @@ function connectDB(){
                     <td colspan="2" class="roboto">nom d'utilisateur :</td>
                 </tr>
                 <tr>
-                    <td class="roboto"><?php echo "{$_SESSION["user_name"]}" ?></td>
+                    <td class="roboto"><?php echo "{$_SESSION['user_name']}" ?></td>
                     <td class="rightText crayon"><img src="crayon.svg" alt="modifier"></td>
                 </tr>
 
@@ -114,4 +138,4 @@ function connectDB(){
             </table>
 
 </div></div>
-<?php include "nav.html" ?> </body> </html>
+<?php include "nav.php" ?> </body> </html>

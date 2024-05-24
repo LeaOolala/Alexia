@@ -1,6 +1,6 @@
 <?php
 // Démarrer la session au début du script
-session_start(); 
+session_start() ;
 
 // Connexion à la bdd
 function connectDB(){
@@ -25,9 +25,9 @@ if(isset($_POST["connexion"])){
     $hashedMdpUserDb = $hashedMdp->fetch(PDO::FETCH_ASSOC);
 
     // test
-    echo $hashedMdpUserDb["user_password"];
-    echo"<hr>";
-    print_r($mdpConnexion);
+    // echo $hashedMdpUserDb["user_password"];
+    // echo"<hr>";
+    // print_r($mdpConnexion);
 
 
     // VERIF MDP
@@ -76,7 +76,7 @@ else{
         <title>Vue Composant</title>
     </head> 
     
-    <body class="connexionBody columnDirection vhFull"> <?php include "nav.html" ?>
+    <body class="connexionBody columnDirection vhFull"> <?php include "nav.php" ?>
     
         <div class="formContainer columnDirection">
             <h1 class="noir smallH1 centerText">Connexion</h1>
@@ -94,4 +94,4 @@ else{
             </form>
         </div>
         
-<?php include "nav.html" ?> </body> </html><?php } ?>
+<?php include "nav.php" ?> </body> </html><?php } ?>

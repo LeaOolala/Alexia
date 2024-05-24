@@ -1,6 +1,4 @@
 <?php
-// Démarrer la session au début du script
-session_start(); 
 
 // Connexion à la bdd
 function connectDB(){
@@ -27,7 +25,7 @@ function connectDB(){
 
     <!--SECTION ONE-->
     <div class="sectionOneBlog vwFull ble">
-        <?php include "nav.html" ?>
+        <?php include "nav.php" ?>
         <h1 class="blanc centerText">Le blog</h1>
     </div>
 
@@ -113,4 +111,4 @@ function connectDB(){
     </div>
 
     <!--NAV-->
-<?php include "nav.html" ?> </body> </html>
+<?php include "nav.php" ?> </body> </html>

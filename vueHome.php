@@ -31,7 +31,7 @@ $reponse = $req->fetchAll(PDO::FETCH_ASSOC);
 
     <!-- SECTION UN-->
     <div class="sectionOneHome columnDirection">
-        <?php include "nav.html" ?>
+        <?php include "nav.php" ?>
         <h1 class="blanc centerText headerImage">Les petits voyages d'Alexia</h1>
     </div>
 
@@ -72,8 +72,7 @@ $reponse = $req->fetchAll(PDO::FETCH_ASSOC);
             </div>
         </div>
         <div class="destination destinationPortugal mB90">
-            <div class="destinationPic piscine">
-            </div>
+            <img src="piscine.jpg" alt="piscine extérieure" class="destinationPic">
             <div class="destinationText columnDirection">
                 <h3 class="noir centerText">Portugal</h3>
                 <p class="destinationP centerText">
@@ -115,8 +114,7 @@ $reponse = $req->fetchAll(PDO::FETCH_ASSOC);
 
     <!--A PROPOS-->
     <div class="destination mB90">
-        <div class="destinationPic about">
-        </div>
+        <img src="about.jpg" alt="femme de dos avec un sac à dos" class="destinationPic">
         <div class="destinationText columnDirection">
             <h3 class="noir centerText">A propos</h3>
             <p class="destinationP centerText">
@@ -128,7 +126,7 @@ $reponse = $req->fetchAll(PDO::FETCH_ASSOC);
     </div>
 
     <!--NAV-->
-    <?php include "nav.html" ?>
+    <?php include "nav.php" ?>
 </body>
 
 </html>

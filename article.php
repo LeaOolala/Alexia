@@ -1,6 +1,4 @@
 <?php
-    // démarrer la session
-    session_start();
 
     // Connexion à la bdd
     function connectDB(){
@@ -36,7 +34,7 @@
     <!-- CONTENU -->
     <div class="connexionBody columnDirection">
         <div class="sectionOneBlog vwFull columnDirection">
-            <?php include "nav.html" ?>
+            <?php include "nav.php" ?>
             <!-- IMAGE RECUPEREE EN BDD -->
             <img src="
                 <?php echo isset($reponse['article_images']) ? $reponse['article_images'] : "https://www.codeur.com/blog/wp-content/uploads/2019/05/corriger-erreur-404-740x447.jpg"; ?>
@@ -62,8 +60,28 @@
             <div class="articleContent w75 columnDirection">
                 <?php echo isset($reponse['article_content']) ? $reponse['article_content'] : "Contenu manquant :s"; ?>
             </div>
+            <div><br></div><div><br></div><div><br></div>
+
+            <!-- COMMENT AREA -->
+            <div class="border vwFull pg50 columnDirection"><?php
     
-        <!-- SINON : MAIN CONTENT ADAPTE -->
-        <?php } else { ?>
+                // FORMULAIRE
+                ?><form action="article.php?article_id=<?php echo $article_id; ?>" method="post" class="formContainer gap25">
+                    <!-- champ -->
+                    <label for="commentContent" style="margin: 0;">Rentrez votre commentaire :</label>
+                    <input type="text" name="commentContent" class="bd22" style="margin: 0;" required>
+                    <!-- submit -->
+                    <input type="submit" name="commenter" value="commenter" class="bd22 submit blanc fondNoir" style="margin: 0; padding: 4px 1px;">
+                </form><?php
+
+                // form answear by if : gestion envoi commentaire ATTENTION SI CONNECTE UNIQUEMENT CONTINUE
+                if (isset($_POST["commenter"])){
+                    echo "Submitted!"; 
+                }
+            
+        ?></div><?php }
+    
+        // SINON : MAIN CONTENT ADAPTE
+         else { ?>
             <a href="vueHome.php">Désolé, cette page n'existe pas... Retournez à l'accueil</a>
-<?php } include "nav.html"; ?> </body> </html>
+<?php } include "nav.php"; ?> </body> </html>
