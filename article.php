@@ -34,7 +34,7 @@
     </head>
     
     <!-- CONTENU -->
-    <div class="connexionBody columnDirection vhFull">
+    <div class="connexionBody columnDirection">
         <div class="sectionOneBlog vwFull columnDirection">
             <?php include "nav.html" ?>
             <!-- IMAGE RECUPEREE EN BDD -->
@@ -65,5 +65,5 @@
     
         <!-- SINON : MAIN CONTENT ADAPTE -->
         <?php } else { ?>
-            <a href="vueHome.php">Désolé, cette page n'existe pas .. Retournez à l'accueil</a>
+            <a href="vueHome.php">Désolé, cette page n'existe pas... Retournez à l'accueil</a>
 <?php } include "nav.html"; ?> </body> </html>

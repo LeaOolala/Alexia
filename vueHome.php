@@ -68,7 +68,7 @@ $reponse = $req->fetchAll(PDO::FETCH_ASSOC);
                     Découvrez l'Espagne, une destination ensoleillée aux mille couleurs et saveurs, où chaque coin
                     révèle une nouvelle aventure.
                 </p>
-                <a class="inter navButton centerText bd22 blanc fondNoir">Voir</a>
+                <a href="vueBlog.php?filtre=Espagne" class="inter navButton centerText bd22 blanc fondNoir">Voir</a>
             </div>
         </div>
         <div class="destination destinationPortugal mB90">
@@ -80,7 +80,7 @@ $reponse = $req->fetchAll(PDO::FETCH_ASSOC);
                     Plongez dans l'atmosphère envoûtante du Portugal, où l'histoire et la beauté se retrouvent pour
                     offrir une expérience de voyage incomparable.
                 </p>
-                <a class="inter navButton centerText bd22 blanc fondNoir">Voir</a>
+                <a href="vueBlog.php?filtre=Portugal" class="inter navButton centerText bd22 blanc fondNoir">Voir</a>
             </div>
         </div>
     </div>
@@ -95,7 +95,7 @@ $reponse = $req->fetchAll(PDO::FETCH_ASSOC);
                 Laissez vous emporter par des recettes authentiques et exotiques qui éveilleront vos papilles à de
                 nouveaux horizons gastronomiques.
             </p>
-            <a class="inter navButton centerText blanc recetteButton fondNoir">Voir les recettes</a>
+            <a href="vueBlog.php?filtre=Recettes" class="inter navButton centerText blanc recetteButton fondNoir">Voir les recettes</a>
         </div>
     </div>
 
@@ -109,7 +109,7 @@ $reponse = $req->fetchAll(PDO::FETCH_ASSOC);
                 Trouvez des astuces pratiques, des conseils d'experts et des ressources utiles pour faciliter chaque
                 étape de votre voyage, de la planification à la réalisation de souvenirs inoubliables.
             </p>
-            <a class="inter navButton centerText bd22 blanc fondNoir">Voir les conseils</a>
+            <a href="vueBlog.php?filtre=Conseils" class="inter navButton centerText bd22 blanc fondNoir">Voir les conseils</a>
         </div>
     </div>
 
